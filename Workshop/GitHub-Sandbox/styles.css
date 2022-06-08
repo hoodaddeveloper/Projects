@@ -1,4 +1,12 @@
 body {
-  background-color: gray;
+  background-color: #f0f0f0;
   font-size: 2em;
+}
+
+header {
+  background-color: #a0a0a0;
+}
+
+.slider {
+  background-color: yellow;
 }
