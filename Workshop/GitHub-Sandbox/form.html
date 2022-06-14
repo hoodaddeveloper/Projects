@@ -18,63 +18,63 @@
   <h1>This Is A Complete Form</h1>
   <form action="index.html" method="POST" target="_blank">
     <!----- Username Input ----->
-    <label>Username: <input type="text" id="username" name="username" placeholder="Type Your Username" minlength="4" maxlength="10" required></label>
-    <br>
+    <label>Username: <input type="text" name="username" placeholder="Type Your Username" minlength="4" maxlength="10" required></label>
     <!----- Age Input ----->
-    <label>Age: <input type="number" id="age" name="age" placeholder="Type Your Age" min="18" max="120" required></label>
-    <br>
+    <label>Age: <input type="number" name="age" min="18" max="120" required></label>
     <!----- Email Input ----->
-    <label>Email: <input type="email" id="email" name="email" placeholder="Type Your Email" required></label>
-    <br>
+    <label>Email: <input type="email" name="email" placeholder="Type Your Email" pattern="[a-z0-5]{8,}" required></label>
     <!----- Password Input ----->
     <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" minlength="6" maxlength="20" onkeyup="check();" required></label>
-    <br>
     <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" minlength="6" maxlength="20" onkeyup="check();" required></label>
     <span id='message'></span>
-    <br>
-    <br>
     <!----- Radio Input ----->
-    <label>Your Gender:
-      <br>
-      Male<input type="radio" name="radio" value="Male">
-      Female<input type="radio" name="radio" value="Female">
-    </label>
-    <br>
-    <br>
+    <span>Your Gender:</span>
+    <label>Male<input type="radio" name="radio" value="Male" required></label>
+    <label>Female<input type="radio" name="radio" value="Female"></label>
     <!----- Checkbox Input ----->
     <label>Select Your Hobbies:
-      <br>
       Swimming <input type="checkbox" name="checkbox" value="swimming" checked>
       Jogging <input type="checkbox" name="checkbox" value="jogging">
-      <br>
       Gaming <input type="checkbox" name="checkbox" value="gaming">
       Hiking <input type="checkbox" name="checkbox" value="hiking">
     </label>
-    <br>
-    <br>
-    <!----- Volume Input ----->
-    <label><input type="text" id="" name="" placeholder=""></label>
-    <br>
-    <br>
+    <!----- Select Box ----->
+    <label>Select Your Country:
+      <select name="options" required>
+        <option value="">Select One</option>
+        <option value="Iran">Iran</option>
+        <option value="Canada">Canada</option>
+        <option value="Japan">Japan</option>
+        <option value="China">China</option>
+      </select>
+    </label>
+    <!----- Datalist ----->
+    <label for="member">What Type Of member Do You Like To Be?</label>
+    <input list="membership" id="member" name="member">
+    <datalist id="membership">
+      <option value="basic"></option>
+      <option value="plus"></option>
+      <option value="pro"></option>
+      <option value="vip"></option>
+    </datalist>
+    <!----- Upload File ----->
+    <label>Upload a Profile Picture: <input type="file" name="file" accept="image/*"></label>
     <!----- Textarea ----->
     Write About Yourself:
-    <br>
-    <textarea name="description" rows="5" cols="50"></textarea>
-    <br>
+    <textarea name="description" rows="5" cols="50" placeholder="Write Here ..."></textarea>
     <!----- Submit Input ----->
     <label><input type="submit" id="submit" name="submit" value="Send"></label>
   </form>
 
   <!----- JavaScript Code for checking Password ----->
   <script type="text/javascript">
-    var check = function() {
-      if (document.getElementById('password').value ==
-        document.getElementById('confirm_password').value) {
+    var check = function () {
+      if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
         document.getElementById('message').style.color = 'green';
-        document.getElementById('message').innerHTML = 'matching';
+        document.getElementById('message').innerHTML = 'Matching';
       } else {
         document.getElementById('message').style.color = 'red';
-        document.getElementById('message').innerHTML = 'not matching';
+        document.getElementById('message').innerHTML = 'Not Matching';
       }
     };
   </script>
