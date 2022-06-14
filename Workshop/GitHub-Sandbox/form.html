@@ -17,14 +17,38 @@
 <body>
   <h1>This Is A Complete Form</h1>
   <form action="" method="POST">
-
-    <label> Username: <input type="text" id="username" name="username" placeholder="Type Your Username"></label><br>
-    <label>Email: <input type="email" id="email" name="email" placeholder="Type Your Email"></label><br>
-    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your password"></label><br>
-
-    <label><input type="text" id="" name="" placeholder=""></label><br>
-    <label><input type="text" id="" name="" placeholder=""></label><br>
-    <label><input type="text" id="" name="" placeholder=""></label><br>
+    <!----- Name, Email & Password Input ----->
+    <label>Username: <input type="text" id="username" name="username" placeholder="Type Your Username" required></label>
+    <br>
+    <label>Email: <input type="email" id="email" name="email" placeholder="Type Your Email" required></label>
+    <br>
+    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" required></label>
+    <br>
+    <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" required></label>
+    <br>
+    <br>
+    <!----- Radio Input ----->
+    <label>Your Gender:
+      <br>
+      Male<input type="radio" id="radio" name="radio">
+      Female<input type="radio" id="radio" name="radio"></label>
+    </label>
+    <br>
+    <br>
+    <!----- Checkbox Input ----->
+    <label>Select Your Hobbies:
+      <br>
+      Swimming <input type="checkbox" id="checkbox" name="checkbox">
+      Jogging <input type="checkbox" id="checkbox" name="checkbox">
+      <br>
+      Gaming <input type="checkbox" id="checkbox" name="checkbox">
+      Hiking <input type="checkbox" id="checkbox" name="checkbox">
+    </label>
+    <br>
+    <label><input type="text" id="" name="" placeholder=""></label>
+    <br>
+    <br>
+    <!----- Submit Input ----->
     <label><input type="submit" id="submit" name="submit" value="Send"></label>
 
   </form>
