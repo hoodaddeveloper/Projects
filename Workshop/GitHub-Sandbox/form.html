@@ -17,14 +17,19 @@
 <body>
   <h1>This Is A Complete Form</h1>
   <form action="index.html" method="POST" target="_blank">
-    <!----- Name, Email & Password Input ----->
+    <!----- Username Input ----->
     <label>Username: <input type="text" id="username" name="username" placeholder="Type Your Username" minlength="4" maxlength="10" required></label>
     <br>
+    <!----- Age Input ----->
+    <label>Age: <input type="number" id="age" name="age" placeholder="Type Your Age" min="18" max="120" required></label>
+    <br>
+    <!----- Email Input ----->
     <label>Email: <input type="email" id="email" name="email" placeholder="Type Your Email" required></label>
     <br>
-    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" minlength="6" maxlength="40" onkeyup="check();" required></label>
+    <!----- Password Input ----->
+    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" minlength="6" maxlength="20" onkeyup="check();" required></label>
     <br>
-    <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" onkeyup="check();" required></label>
+    <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" minlength="6" maxlength="20" onkeyup="check();" required></label>
     <span id='message'></span>
     <br>
     <br>
@@ -39,16 +44,22 @@
     <!----- Checkbox Input ----->
     <label>Select Your Hobbies:
       <br>
-      Swimming <input type="checkbox" id="checkbox" name="checkbox">
-      Jogging <input type="checkbox" id="checkbox" name="checkbox">
+      Swimming <input type="checkbox" name="checkbox" value="swimming" checked>
+      Jogging <input type="checkbox" name="checkbox" value="jogging">
       <br>
-      Gaming <input type="checkbox" id="checkbox" name="checkbox">
-      Hiking <input type="checkbox" id="checkbox" name="checkbox">
+      Gaming <input type="checkbox" name="checkbox" value="gaming">
+      Hiking <input type="checkbox" name="checkbox" value="hiking">
     </label>
+    <br>
     <br>
     <!----- Volume Input ----->
     <label><input type="text" id="" name="" placeholder=""></label>
     <br>
+    <br>
+    <!----- Textarea ----->
+    Write About Yourself:
+    <br>
+    <textarea name="description" rows="5" cols="50"></textarea>
     <br>
     <!----- Submit Input ----->
     <label><input type="submit" id="submit" name="submit" value="Send"></label>
