@@ -16,15 +16,16 @@
 </head>
 <body>
   <h1>This Is A Complete Form</h1>
-  <form action="/index.html" method="POST" target="_blank">
+  <form action="index.html" method="POST" target="_blank">
     <!----- Name, Email & Password Input ----->
     <label>Username: <input type="text" id="username" name="username" placeholder="Type Your Username" minlength="4" maxlength="10" required></label>
     <br>
     <label>Email: <input type="email" id="email" name="email" placeholder="Type Your Email" required></label>
     <br>
-    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" minlength="6" maxlength="40" required></label>
+    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" minlength="6" maxlength="40" onkeyup="check();" required></label>
     <br>
-    <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" required></label>
+    <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" onkeyup="check();" required></label>
+    <span id='message'></span>
     <br>
     <br>
     <!----- Radio Input ----->
@@ -51,7 +52,21 @@
     <br>
     <!----- Submit Input ----->
     <label><input type="submit" id="submit" name="submit" value="Send"></label>
-
   </form>
+
+  <!----- JavaScript Code for checking Password ----->
+  <script type="text/javascript">
+    var check = function() {
+      if (document.getElementById('password').value ==
+        document.getElementById('confirm_password').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'matching';
+      } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'not matching';
+      }
+    };
+  </script>
+
 </body>
 </html>
