@@ -16,13 +16,13 @@
 </head>
 <body>
   <h1>This Is A Complete Form</h1>
-  <form action="" method="POST">
+  <form action="/index.html" method="POST" target="_blank">
     <!----- Name, Email & Password Input ----->
-    <label>Username: <input type="text" id="username" name="username" placeholder="Type Your Username" required></label>
+    <label>Username: <input type="text" id="username" name="username" placeholder="Type Your Username" minlength="4" maxlength="10" required></label>
     <br>
     <label>Email: <input type="email" id="email" name="email" placeholder="Type Your Email" required></label>
     <br>
-    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" required></label>
+    <label>Password: <input type="password" id="password" name="password" placeholder="Type Your Password" minlength="6" maxlength="40" required></label>
     <br>
     <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" required></label>
     <br>
@@ -30,8 +30,8 @@
     <!----- Radio Input ----->
     <label>Your Gender:
       <br>
-      Male<input type="radio" id="radio" name="radio">
-      Female<input type="radio" id="radio" name="radio"></label>
+      Male<input type="radio" name="radio" value="Male">
+      Female<input type="radio" name="radio" value="Female">
     </label>
     <br>
     <br>
@@ -45,6 +45,7 @@
       Hiking <input type="checkbox" id="checkbox" name="checkbox">
     </label>
     <br>
+    <!----- Volume Input ----->
     <label><input type="text" id="" name="" placeholder=""></label>
     <br>
     <br>
