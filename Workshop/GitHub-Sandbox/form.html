@@ -18,16 +18,12 @@
       overflow: auto;
     }
 
-    hr {
-      width: 10%;
-    }
-
     h1 {
       text-align: center;
     }
 
     input[type="image"] {
-      width: 10%;
+      width: 50px;
     }
   </style>
 </head>
@@ -36,26 +32,20 @@
   <form action="index.html" method="POST" target="_blank">
     <!----- Username Input ----->
     <label>Username: <input type="text" name="username" placeholder="Enter Your Username" minlength="4" maxlength="10" pattern="[a-zA-Z0-9]+" required></label>
-    <hr>
     <!----- Credit Card Input ----->
     <label>Credit Card Number: <input type="text" name="credit" placeholder="Enter Your Card Number" pattern="[0-9]{14,16}" required></label>
-    <hr>
     <!----- Age Input ----->
     <label>Age: <input type="number" name="age" min="18" max="120" required></label>
-    <hr>
     <!----- Email Input ----->
     <label>Email: <input type="email" name="email" placeholder="Enter Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required></label>
-    <hr>
     <!----- Password Input ----->
     <label>Password: <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="6" maxlength="20" onkeyup="check();" required></label>
     <label>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Your Password" minlength="6" maxlength="20" onkeyup="check();" required></label>
     <span id='message'></span>
-    <hr>
     <!----- Radio Input ----->
     <span>Your Gender:</span>
     <label>Male<input type="radio" name="radio" value="Male" required></label>
     <label>Female<input type="radio" name="radio" value="Female"></label>
-    <hr>
     <!----- Checkbox Input ----->
     <label>Select Your Hobbies:
       Swimming <input type="checkbox" name="checkbox" value="swimming" checked>
@@ -64,11 +54,12 @@
       Hiking <input type="checkbox" name="checkbox" value="hiking">
     </label>
     <!----- Range Box ----->
-    <label for="degree">Select Your Degree</label>
-    <br>
-    <span>Rare</span>
-    <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
-    <span>Well-Done</span>
+    <label>Select Your Degree
+      <br>
+      <span>Junior</span>
+      <input type="range" name="degree" id="degree" value="5" min="1" max="10">
+      <span>CEO</span>
+    </label>
     <!----- Select Box ----->
     <label>Select Your Country:
       <select name="options" required>
