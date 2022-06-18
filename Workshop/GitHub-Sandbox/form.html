@@ -8,18 +8,24 @@
   <style>
     body {
       background-color: rgb(57, 169, 219);
-      font-family: Rubik, Arial;
+      font-family: Arial;
     }
 
     form {
       text-align: center;
       line-height: 30px;
       height: 80%;
+      width: 80%;
       overflow: auto;
+      margin: 3% auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 40px;
+      display: block;
     }
 
     h1 {
       text-align: center;
+      color: purple;
     }
 
     input[type="image"] {
@@ -28,8 +34,8 @@
   </style>
 </head>
 <body>
-  <h1>This Is A Complete Form</h1>
   <form action="index.html" method="POST" target="_blank">
+    <h1>This Is A Complete Form</h1>
     <!----- Username Input ----->
     <label>Username: <input type="text" name="username" placeholder="Enter Your Username" minlength="4" maxlength="10" pattern="[a-zA-Z0-9]+" required></label>
     <!----- Credit Card Input ----->
@@ -55,7 +61,6 @@
     </label>
     <!----- Range Box ----->
     <label>Select Your Degree
-      <br>
       <span>Junior</span>
       <input type="range" name="degree" id="degree" value="5" min="1" max="10">
       <span>CEO</span>
@@ -85,14 +90,14 @@
     Write About Yourself:
     <textarea name="description" rows="5" cols="50" placeholder="Write Here ..."></textarea>
     <!----- Submit, Reset & Image ----->
+    <input type="image" name="imagebutton" src="submit.jpg">
     <input type="submit" id="submit" name="submit" value="Send">
     <input type="reset" name="reset" value="reset">
-    <input type="image" name="imagebutton" src="submit.jpg">
   </form>
 
   <!----- JavaScript Code for checking Password ----->
   <script type="text/javascript">
-    var check = function () {
+    var check = function() {
       if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
         document.getElementById('message').style.color = 'green';
         document.getElementById('message').innerHTML = 'Matching';
